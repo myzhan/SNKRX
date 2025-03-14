@@ -1696,7 +1696,6 @@ function init()
     'magnetism', 'insurance', 'dividends', 'haste', 'rearm', 'ceremonial_dagger', 'burning_strike', 'lucky_strike', 'healing_strike', 'psycholeak', 'divine_blessing', 'hardening',
   }
 
-  steam.userStats.requestCurrentStats()
   new_game_plus = state.new_game_plus or 0
   if not state.new_game_plus then state.new_game_plus = new_game_plus end
   current_new_game_plus = state.current_new_game_plus or new_game_plus
@@ -1824,12 +1823,6 @@ function update(dt)
     state.fullscreen = false
   end
 
-  --[[
-  if input.f11.pressed then
-    steam.userStats.resetAllStats(true)
-    steam.userStats.storeStats()
-  end
-  ]]--
 end
 
 
